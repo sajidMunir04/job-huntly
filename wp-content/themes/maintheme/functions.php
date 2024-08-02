@@ -1,5 +1,6 @@
 <?php 
-    register_nav_menus(array('header_menu'=>'Header Menu') );
+
+    register_nav_menus(array('header-menu'=>'Header Menu') );
 
     function create_jobs_post_type() {
 
