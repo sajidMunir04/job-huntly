@@ -1,0 +1,47 @@
+.find-jobs-search-section{
+    width: 100%;
+    padding: 2% var(--horizontal-padding);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    background-color: #202430;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.jobs-search-input{
+    display: block;
+    width: 50%;
+    padding: 1%;
+    border: none;
+    font-family: Titillium-SemiBold;
+    font-size: 18px;
+}
+
+
+.job-field-select{
+    width: 29%;
+    border: none;
+    background-color: white;
+    font-family: Titillium-SemiBold;
+    font-size: 18px;
+    text-align: center;    
+}
+
+.job-search-button{
+    background: none;
+	background-color: #4640DE;
+	border: none;
+	color: white;
+    width: 20%;
+    border: none;
+    color: white;
+    font-family: Titillium-SemiBold;
+    font-size: 18px;
+}
+
+option[value="1"] {
+    
+    font-family: Titillium-SemiBold;
+    font-size: 18px;
+}

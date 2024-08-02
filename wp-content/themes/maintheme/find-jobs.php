@@ -1,6 +1,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/stylesheets/find-jobs.css">
 </head>
 
 
@@ -11,8 +12,42 @@
 
 ?>
 <body>
-<h1>This is browse companies page</h1>
-    <div class="job-lists-container">
+    <div id="searchform" class="find-jobs-search-section">
+        <input id='searchquery' name="searchquery" class="jobs-search-input" type="text" placeholder="Enter search term"/>
+        <select class="job-field-select">
+            <option value="1" class="job-field-option">All</option>
+            <option value="2">Design</option>
+            <option value="3">Sales</option>
+            <option value="4">Marketing</option>
+            <option value="5">Finance</option>
+            <option value="6">Technology</option>
+            <option value="7">Engineering</option>
+            <option value="8">Business</option>
+            <option value="9">Human Resources</option>
+        </select>
+        <button onclick="sendData()" class="job-search-button">Search</button>
+    </div>
+    <script>
+        function sendData() {
+    const inputValue = document.getElementById('searchquery').value;
+
+    fetch('process-search.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ input: inputValue })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
+    </script>
+    <div class="job-lists-container" id="result">
 
 <?php
 

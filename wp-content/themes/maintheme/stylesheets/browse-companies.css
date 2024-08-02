@@ -1,0 +1,71 @@
+body {
+    background-color: rgb(245, 245, 229);
+}
+
+.company-card{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    padding: 3%;
+    box-sizing: border-box;
+}
+
+.company-name{
+    color: var(--primary-color);
+}
+
+.company-card-content{
+    margin-left: 3%;
+    width: 70%;
+}
+
+.company-card-job-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company-card-job{
+    border-top: 2px solid var(--border-color);
+    width: 100%;
+}
+
+.job-list-card-button{
+    background-color: #4640DE;
+    padding: 1.5% 4%;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+
+.job-list-card-tags-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%;
+}
+
+
+.job-list-card-tag {
+    margin-left: 4%;
+    padding: 1%;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.company-jobs-container{
+    margin-top: 8%;
+}
+
+.company-card-job-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.job-list-card-title{
+    color: var(--primary-color);
+    font-size: 28px;
+}
