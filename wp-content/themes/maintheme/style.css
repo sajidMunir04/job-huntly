@@ -54,6 +54,7 @@ Twenty Twenty-Two is distributed under the terms of the GNU GPL.
 	--horizontal-padding: 8%;
 	--accent-color: #26A4FF;
 	--border-color: #D6DDEB;
+	--primary-color: #25324B;
 }
 
 
@@ -68,14 +69,8 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	font-family: Titillium-Regular;
+	color: #7C8493;
 }
-
-
-/*
- * Text and navigation link styles.
- * Necessary until the following issue is resolved in Gutenberg:
- * https://github.com/WordPress/gutenberg/issues/27075
- */
 
 
 header{
@@ -83,6 +78,22 @@ header{
 	padding: 0% var(--horizontal-padding);
 	box-sizing: border-box;
 	margin-top: 2%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-menu > ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	list-style-type: none;
+}
+
+.header-menu > ul > li > a {
+	text-decoration: none;
+	color: var(--primary-color);
 }
 
 .main-banner {
@@ -118,12 +129,16 @@ header{
 	margin-block: 6%;
 }
 
+.clients-section-heading{
+	font-size: 18px;
+}
+
 .clients-section-content{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 3%;
+	margin-top: 8%;
 }
 
 .job-categories-section{
@@ -146,6 +161,12 @@ header{
 	margin-bottom: 3%;
 }
 
+.job-category-heading{
+	color: var(--primary-color);
+	font-size: 20px;
+	font-family: Titillium-SemiBold;
+	margin-bottom: 0%;
+}
 
 .job-categories-section-header, .latest-jobs-section-header, .featured-jobs-section-header{
 	display: flex;
@@ -153,6 +174,10 @@ header{
 	align-items: center;
 	font-family: Titillium-Bold;
 	font-size: 28px;
+}
+
+.job-categories-external-link,.featured-jobs-section-external-link,.latest-jobs-section-external-link{
+	color: var(--primary-color);
 }
 
 .job-categories-section-header, .latest-jobs-section-header, .featured-jobs-section-header > p{
@@ -168,7 +193,7 @@ header{
 
 .latest-jobs-section-heading,.featured-jobs-section-heading,.job-categories-section-heading {
 	font-size: 28px;
-
+	color: var(--primary-color);
 }
 
 a {
@@ -323,16 +348,37 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
 	cursor: pointer;
 }
 
+
+.featured-job-title{
+	font-family: Titillium-SemiBold;
+	font-size: 18px;
+	margin-bottom: 0%;
+	color: var(--primary-color);
+}
+
+.featured-job-location {
+	margin-top: 1%;
+}
+
 .featured-job-card-logo{
 	width: 54px;
 	height: 54px;
 }
 
 .featured-job-description {
-	text-overflow: ellipsis;
-	width: 100%;
-	height: 60px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2; /* Number of lines to show */
 	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: normal;
+}
+
+
+.job-listing-info-tag{
+	padding: 0.5% 1%;
+	border: 32px;
+	margin-right: 3%;
 }
 
 .featured-job-tags-container{
@@ -369,6 +415,7 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
 	font-family: Titillium-SemiBold;
 	font-size: 20px;
 	margin: 0%;
+	color: var(--primary-color);
 }
 
 .latest-job-location{
@@ -384,9 +431,9 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
 }
 
 
-.latest-job-tag{
+.job-info-tag{
 	margin-left: 6%;
-	padding: 2% 6%;
+	padding: 1% 4%;
 	box-sizing: border-box;
 	word-break: keep-all;
 }
@@ -553,6 +600,7 @@ footer{
 	padding: 2% var(--horizontal-padding);
 	box-sizing: border-box;
 	margin-top: 6%;
+	margin-bottom: 6%;
 }
 
 .job-detail-card-title{

@@ -37,8 +37,9 @@ if ($query->have_posts()) :
                 <p class="job-detail-card-location">$<?php echo $job_details['salary_min'] ?> - $<?php echo $job_details['salary_max']; ?></p>
                 <p class="job-detail-card-description"><?php echo get_field('job_description'); ?></p>
                 <div class="job-detail-card-tags-container">
-                    <p class="featured-job-tag job-tag-blue"><?php echo get_field('company_name'); ?></p>
-                    <p class="featured-job-tag job-tag-red"><?php echo get_field('job_seniority'); ?></p>
+                    <p class="job-listing-info-tag job-tag-blue"><?php echo get_field('job_requirement'); ?></p>
+                    <p class="job-listing-info-tag job-tag-red"><?php echo get_field('job_seniority'); ?></p>
+                    <p class="job-listing-info-tag job-tag-red"><?php echo get_field('job_type'); ?></p>
                 </div>
             </div>
             <a href="#" class="job-apply-button">Apply Now</a>
@@ -51,3 +52,9 @@ wp_reset_postdata();
 ?>
     </div>
 </body>
+
+
+<?php 
+
+    get_footer();
+?>

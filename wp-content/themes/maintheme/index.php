@@ -49,7 +49,7 @@ get_header();
             </div>
             <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?sales'">
                 <div class="job-category-icon-container">
-                    <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/design-category-icon.svg">
+                    <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/sales-icon.svg">
                 </div>
                 <h4 class="job-category-heading">Sales</h4>
                 <div class="job-category-info">
@@ -59,7 +59,7 @@ get_header();
             </div>
             <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?marketing'">
                 <div class="job-category-icon-container">
-                    <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/design-category-icon.svg">
+                    <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/marketing-icon.svg">
                 </div>
                 <h4 class="job-category-heading">Marketing</h4>
                 <div class="job-category-info">
@@ -69,7 +69,7 @@ get_header();
             </div>
             <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?finance'">
                 <div class="job-category-icon-container">
-                    <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/design-category-icon.svg">
+                    <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/finance-icon.svg">
                 </div>
                 <h4 class="job-category-heading">Finance</h4>
                 <div class="job-category-info">
@@ -79,7 +79,7 @@ get_header();
             </div>
             <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?technology'">
                 <div class="job-category-icon-container">
-                    <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/design-category-icon.svg">
+                    <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/technology-icon.svg">
                 </div>
                 <h4 class="job-category-heading">Technology</h4>
                 <div class="job-category-info">
@@ -89,7 +89,7 @@ get_header();
             </div>
             <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?engineering'">
                 <div class="job-category-icon-container">
-                    <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/design-category-icon.svg">
+                    <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/engineering-icon.svg">
                 </div>
                 <h4 class="job-category-heading">Engineering</h4>
                 <div class="job-category-info">
@@ -99,7 +99,7 @@ get_header();
             </div>
             <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?business'">
                 <div class="job-category-icon-container">
-                    <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/design-category-icon.svg">
+                    <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/business-icon.svg">
                 </div>
                 <h4 class="job-category-heading">Business</h4>
                 <div class="job-category-info">
@@ -109,7 +109,7 @@ get_header();
             </div>
             <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?hr'">
                 <div class="job-category-icon-container">
-                    <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/design-category-icon.svg">
+                    <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/hr-icon.svg">
                 </div>
                 <h4 class="job-category-heading">Human Resources</h4>
                 <div class="job-category-info">
@@ -122,7 +122,7 @@ get_header();
     <div class="featured-jobs-section">
         <div class="featured-jobs-section-header">
             <h5 class="featured-jobs-section-heading">Featured <span class="blue-heading">Jobs</span></h5>
-            <p class="featured-jobs-section-external-link">Show all jobs<span class="right-arrow">&#x279C;</span></p>
+            <p class="featured-jobs-section-external-link">Show all jobs <span class="right-arrow">&#x279C;</span></p>
         </div>
         <div class="featured-jobs-section-content">
             <?php
@@ -145,8 +145,8 @@ get_header();
                             <p class="featured-job-location"><?php echo get_field('job_location'); ?></p>
                             <p class="featured-job-description"><?php echo get_field('job_description'); ?></p>
                             <div class="featured-job-tags-container">
-                                <p class="featured-job-tag job-tag-blue"><?php echo get_field('company_name'); ?></p>
-                                <p class="featured-job-tag job-tag-red"><?php echo get_field('job_seniority'); ?></p>
+                                <p class="job-info-tag job-tag-blue"><?php echo get_field('job_type'); ?></p>
+                                <p class="job-info-tag job-tag-red"><?php echo get_field('job_seniority'); ?></p>
                             </div>
                         </div>
                     </div>
@@ -162,7 +162,7 @@ get_header();
     <div class="latest-jobs-section">
         <div class="latest-jobs-section-header">
             <h6 class="latest-jobs-section-heading">Latest <span class="blue-heading">Jobs</span></h6>
-            <p class="latest-jobs-section-external-link">Show All Jobs<span class="right-arrow">&#x279C;</span></p>
+            <p class="latest-jobs-section-external-link">Show All Jobs <span class="right-arrow">&#x279C;</span></p>
         </div>
         <div class="latest-jobs-section-content">
         <?php
@@ -185,8 +185,8 @@ get_header();
                             <h6 class="latest-job-title"><?php echo get_field('job_title')?></h6>
                             <p class="latest-job-location"><?php echo get_field('job_location'); ?></p>
                             <div class="latest-job-tags-container">
-                                <p class="latest-job-tag job-tag-blue"><?php echo get_field('company_name'); ?></p>
-                                <p class="latest-job-tag job-tag-red"><?php echo get_field('job_seniority'); ?></p>
+                                <p class="job-info-tag job-tag-blue"><?php echo get_field('job_requirement'); ?></p>
+                                <p class="job-info-tag job-tag-red"><?php echo get_field('job_seniority'); ?></p>
                             </div>
                         </div>
                     </div>
