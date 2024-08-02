@@ -1,0 +1,612 @@
+/*
+Theme Name: Twenty Twenty-Two
+Theme URI: https://wordpress.org/themes/twentytwentytwo/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Built on a solidly designed foundation, Twenty Twenty-Two embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its color palette is drawn from nature, and its layout elements sit gently on the page. The true richness of Twenty Twenty-Two lies in its opportunity for customization. The theme is built to take advantage of the Site Editor features introduced in WordPress 5.9, which means that colors, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks. Whether you’re building a single-page website, a blog, a business website, or a portfolio, Twenty Twenty-Two will help you create a site that is uniquely yours.
+Requires at least: 5.9
+Tested up to: 6.6
+Requires PHP: 5.6
+Version: 1.8
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentytwentytwo
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, latest-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, style-variations, wide-blocks, block-styles, accessibility-ready, blog, portfolio, news
+
+Twenty Twenty-Two WordPress Theme, (C) 2021 WordPress.org
+Twenty Twenty-Two is distributed under the terms of the GNU GPL.
+*/
+
+/*
+ * Font smoothing.
+ * This is a niche setting that will not be available via Global Styles.
+ * https://github.com/WordPress/gutenberg/issues/35934
+ */
+
+ 
+@font-face {
+	font-family: Titillium-Black;
+	src: url('./assets/fonts/titillium-web/TitilliumWeb-Black.ttf');
+}
+
+@font-face {
+	font-family: Titillium-Bold;
+	src: url('./assets/fonts/titillium-web/TitilliumWeb-Bold.ttf');
+}
+
+@font-face {
+	font-family: Titillium-Light;
+	src: url('./assets/fonts/titillium-web//TitilliumWeb-Light.ttf');
+}
+
+@font-face {
+	font-family: Titillium-Regular;
+	src: url('./assets/fonts/titillium-web/TitilliumWeb-Regular.ttf');
+}
+
+
+@font-face {
+	font-family: Titillium-SemiBold;
+	src: url('./assets/fonts/titillium-web/TitilliumWeb-SemiBold.ttf');
+}
+
+:root{
+	--horizontal-padding: 8%;
+	--accent-color: #26A4FF;
+	--border-color: #D6DDEB;
+}
+
+
+html{
+	margin: 0%;
+	padding: 0%;
+}
+
+body {
+	margin: 0%;
+	padding: 0%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family: Titillium-Regular;
+}
+
+
+/*
+ * Text and navigation link styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+
+
+header{
+	width: 100%;
+	padding: 0% var(--horizontal-padding);
+	box-sizing: border-box;
+	margin-top: 2%;
+}
+
+.main-banner {
+	width: 100%;
+	padding: 0% var(--horizontal-padding);
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main-banner-heading{
+	font-family: Titillium-Bold;
+}
+
+.heading-blue,.blue-heading {
+	color: var(--accent-color);
+}
+
+.pattern-container{
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -1;
+	overflow: hidden;
+}
+
+.clients-section{
+	width: 100%;
+	padding: 0% var(--horizontal-padding);
+	box-sizing: border-box;
+	margin-block: 6%;
+}
+
+.clients-section-content{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 3%;
+}
+
+.job-categories-section{
+	width: 100%;
+	padding: 0% var(--horizontal-padding);
+	box-sizing: border-box
+}
+
+.job-categories-section-content{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-between;
+}
+.job-category{
+	width: 23%;
+	padding: 2%;
+	box-sizing: border-box;
+	border: 2px solid var(--border-color);
+	margin-bottom: 3%;
+}
+
+
+.job-categories-section-header, .latest-jobs-section-header, .featured-jobs-section-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: Titillium-Bold;
+	font-size: 28px;
+}
+
+.job-categories-section-header, .latest-jobs-section-header, .featured-jobs-section-header > p{
+	font-family: Titillium-SemiBold;
+	font-size: 16px;
+}
+
+.latest-jobs-section,.latest-jobs-section {
+	width: 100%;
+	padding: 0% var(--horizontal-padding);
+	box-sizing: border-box
+}
+
+.latest-jobs-section-heading,.featured-jobs-section-heading,.job-categories-section-heading {
+	font-size: 28px;
+
+}
+
+a {
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.25ch;
+}
+
+a:hover,
+a:focus {
+	text-decoration-style: dashed;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+.wp-block-navigation .wp-block-navigation-item a:hover,
+.wp-block-navigation .wp-block-navigation-item a:focus {
+	text-decoration: underline;
+	text-decoration-style: solid;
+}
+
+/*
+ * Search and File Block button styles.
+ * Necessary until the following issues are resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/36444
+ * https://github.com/WordPress/gutenberg/issues/27760
+ */
+
+.wp-block-search__button,
+.wp-block-file .wp-block-file__button {
+	background-color: var(--wp--preset--color--primary);
+	border-radius: 0;
+	border: none;
+	color: var(--wp--preset--color--background);
+	font-size: var(--wp--preset--font-size--medium);
+	padding: calc(.667em + 2px) calc(1.333em + 2px);
+}
+
+/*
+ * Button hover styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+
+.wp-block-search__button:hover,
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-button__link:hover {
+	opacity: 0.90;
+}
+
+/*
+ * Alignment styles.
+ * These rules are temporary, and should not be relied on or
+ * modified too heavily by themes or plugins that build on
+ * Twenty Twenty-Two. These are meant to be a precursor to
+ * a global solution provided by the Block Editor.
+ *
+ * Relevant issues:
+ * https://github.com/WordPress/gutenberg/issues/35607
+ * https://github.com/WordPress/gutenberg/issues/35884
+ */
+
+.wp-site-blocks,
+body > .is-root-container,
+.edit-post-visual-editor__post-title-wrapper,
+.wp-block-group.alignfull,
+.wp-block-group.has-background,
+.wp-block-cover.alignfull,
+.is-root-container .wp-block[data-align="full"] > .wp-block-group,
+.is-root-container .wp-block[data-align="full"] > .wp-block-cover {
+	padding-left: var(--wp--custom--spacing--outer);
+	padding-right: var(--wp--custom--spacing--outer);
+}
+
+.wp-site-blocks .alignfull,
+.wp-site-blocks > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-cover,
+.wp-site-blocks > .wp-block-template-part > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-template-part > .wp-block-cover,
+body > .is-root-container > .wp-block-cover,
+body > .is-root-container > .wp-block-template-part > .wp-block-group.has-background,
+body > .is-root-container > .wp-block-template-part > .wp-block-cover,
+.is-root-container .wp-block[data-align="full"] {
+	margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+	margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+	width: unset;
+}
+
+/* Blocks inside columns don't have negative margins. */
+.wp-site-blocks .wp-block-columns .wp-block-column .alignfull,
+.is-root-container .wp-block-columns .wp-block-column .wp-block[data-align="full"],
+/* We also want to avoid stacking negative margins. */
+.wp-site-blocks .alignfull:not(.wp-block-group) .alignfull,
+.is-root-container .wp-block[data-align="full"] > *:not(.wp-block-group) .wp-block[data-align="full"] {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	width: inherit;
+}
+
+/*
+ * Responsive menu container padding.
+ * This ensures the responsive container inherits the same
+ * spacing defined above. This behavior may be built into
+ * the Block Editor in the future.
+ */
+
+.wp-block-navigation__responsive-container.is-menu-open {
+	padding-top: var(--wp--custom--spacing--outer);
+	padding-bottom: var(--wp--custom--spacing--large);
+	padding-right: var(--wp--custom--spacing--outer);
+	padding-left: var(--wp--custom--spacing--outer);
+}
+
+/*
+ * Improves spacing for the legacy Post Comments block.
+ * https://core.trac.wordpress.org/ticket/57560
+ */
+
+.wp-block-post-comments ol.commentlist ul.children {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.wp-block-post-comments ol.commentlist li.comment:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+.featured-jobs-section{
+	width: 100%;
+	padding: 0% var(--horizontal-padding);
+	box-sizing: border-box;
+}
+
+
+.featured-jobs-section-content{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+
+.featured-job-card{
+	padding: 1.4%;
+	box-sizing: border-box;
+	border: 2px solid var(--border-color);
+	width: 22%;
+	margin-bottom: 4%;
+	cursor: pointer;
+}
+
+.featured-job-card-logo{
+	width: 54px;
+	height: 54px;
+}
+
+.featured-job-description {
+	text-overflow: ellipsis;
+	width: 100%;
+	height: 60px;
+	overflow: hidden;
+}
+
+.featured-job-tags-container{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.latest-jobs-section-content{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.latest-job-card{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: white;
+	width: 46%;
+	padding: 1% 2%;
+	margin-bottom: 4%;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.latest-job-card-content{
+	margin-left: 6%;
+}
+
+.latest-job-title {
+	font-family: Titillium-SemiBold;
+	font-size: 20px;
+	margin: 0%;
+}
+
+.latest-job-location{
+	font-size: Titillium-Light;
+	font-size: 14px;
+	margin-block: 2%;
+}
+
+.latest-job-tags-container{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+
+.latest-job-tag{
+	margin-left: 6%;
+	padding: 2% 6%;
+	box-sizing: border-box;
+	word-break: keep-all;
+}
+
+.job-tag-blue{
+	color: blue;
+	border: 2px solid blue;
+	border-radius: 50px;
+}
+
+.job-tag-red{
+	color: red;
+	border: 2px solid red;
+	border-radius: 20px;
+	border-radius: 50px;
+}
+
+.latest-jobs-section{
+	background-color: #F8F8FD;
+
+}
+
+
+.latest-job-card-logo-container{
+
+}
+
+.latest-job-card-logo{
+	width: 54px;
+	height: 54px;
+}
+
+footer{
+	background-color: #202430;
+	color: white;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.footer-main-section{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 3% var(--horizontal-padding);
+	box-sizing: border-box;
+}
+
+.footer-info-section{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 84%;
+	padding: 2% 0%;
+	margin: auto;
+	box-sizing: border-box;
+	border-top: 2px solid var(--border-color);
+}
+
+.social-links-container{
+	width: 30%;
+}
+
+.right-arrow{
+	vertical-align: middle;
+}
+
+.social-link{
+	width: 32px;
+	height: 32px;
+	background-color: gray;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 4%;
+}
+
+.footer-about-us-section{
+	width: 33%;
+}
+
+.footer-about-section {
+	display: flex;
+	flex-direction: column;
+	width: 15%;
+}
+
+.footer-resources-section{
+	display: flex;
+	flex-direction: column;
+	width: 15%;
+}
+
+.footer-about-us-paragraph{
+	margin-top: 3.4%;
+}
+
+.footer-external-link{
+	text-decoration: none;
+	color: white;
+}
+
+.footer-subscribe-section{
+	width: 24%;
+}
+
+.footer-section-text{
+	font-family: Titillium-SemiBold;
+	font-size: 16px;
+}
+
+.email-input{
+	padding: 3.5%;
+	box-sizing: border-box;
+	font-family: Titillium-SemiBold;
+}
+
+.email-input-label{
+
+}
+
+.subscribe-form{
+	height: 40%;
+	margin: 0%;
+}
+
+.subscribe-form-button{
+	background: none;
+	background-color: #4640DE;
+	border: none;
+	color: white;
+	font-family: Titillium-SemiBold;
+	font-size: 18px;
+	padding: 2.6%;
+}
+
+.job-apply-button{
+	display: block;
+	width: 100%;
+	border-radius: 12px;
+	background: none;
+	border: none;
+	background-color: var(--accent-color);
+	color: white;
+	font-family: Titillium-SemiBold;
+	font-size: 18px;
+	text-align: center;
+	vertical-align: middle;
+	padding: 2% 0%;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+.social-links-container{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+
+.job-detail-card {
+	width: 100%;
+	padding: 2% var(--horizontal-padding);
+	box-sizing: border-box;
+	margin-top: 6%;
+}
+
+.job-detail-card-title{
+	margin-bottom: 0%;
+}
+
+.job-detail-card-location{
+	margin-top: 0%;
+}
+
+.job-detail-card-tags-container{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+
+
+
+.job-lists-container{
+	width: 100%;
+	padding: 2% var(--horizontal-padding);
+	box-sizing: border-box;
+	margin-top: 10%;
+}
+
+
+.job-list-card{
+	width: 100%;
+	padding: 1% 2%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 2px solid var(--border-color);
+	border-radius: 32px;
+	margin-bottom: 6%;
+}
+
+.job-list-card-header{
+	width: 10%;
+}
+
+.job-list-card-logo {
+	width: 68px;
+	height: 68px;
+}
+
+.job-list-card-content {
+	width: 46%;
+	align-self: flex-start;	
+}
+
+.job-list-card-tags-container{
+	display: flex;
+	justify-content: space-between;
+}
