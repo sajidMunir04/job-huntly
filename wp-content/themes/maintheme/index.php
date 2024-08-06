@@ -40,7 +40,26 @@ get_header();
                 <div class="job-category-content">
                 <h4 class="job-category-heading">Design</h4>
                 <div class="job-category-info">
-                    <p class="job-category-numbers">235 Jobs available</p>
+                <?php
+                    // Query for the custom post type with taxonomy filter
+                    $query = new WP_Query(array(
+                        'post_type' => 'jobs', // Replace with your custom post type name
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'department', // Replace with your taxonomy name
+                                'field'    => 'slug', // or 'term_id'
+                                'terms'    => 'design', // Replace with the actual term slug or term ID
+                            ),
+                        ),
+                    ));
+                    ?>
+
+                    <p class="job-category-numbers"><?php echo $query->found_posts; ?> Jobs available</p>
+
+                    <?php
+                    // Reset Post Data
+                    wp_reset_postdata();
+                    ?>
                     <p class="job-category-arrow-link"></p>
                 </div>
                 </div>
@@ -52,7 +71,26 @@ get_header();
                 <div class="job-category-content">
                 <h4 class="job-category-heading">Sales</h4>
                 <div class="job-category-info">
-                    <p class="job-category-numbers">235 Jobs available</p>
+                <?php
+                    // Query for the custom post type with taxonomy filter
+                    $query = new WP_Query(array(
+                        'post_type' => 'jobs', // Replace with your custom post type name
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'department', // Replace with your taxonomy name
+                                'field'    => 'slug', // or 'term_id'
+                                'terms'    => 'sales', // Replace with the actual term slug or term ID
+                            ),
+                        ),
+                    ));
+                    ?>
+
+                    <p class="job-category-numbers"><?php echo $query->found_posts; ?> Jobs available</p>
+
+                    <?php
+                    // Reset Post Data
+                    wp_reset_postdata();
+                    ?>
                     <p class="job-category-arrow-link"></p>
                 </div>
                 </div>
@@ -64,7 +102,26 @@ get_header();
                 <div class="job-category-content">
                 <h4 class="job-category-heading">Marketing</h4>
                 <div class="job-category-info">
-                    <p class="job-category-numbers">235 Jobs available</p>
+                <?php
+                    // Query for the custom post type with taxonomy filter
+                    $query = new WP_Query(array(
+                        'post_type' => 'jobs', // Replace with your custom post type name
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'department', // Replace with your taxonomy name
+                                'field'    => 'slug', // or 'term_id'
+                                'terms'    => 'marketing', // Replace with the actual term slug or term ID
+                            ),
+                        ),
+                    ));
+                    ?>
+
+                    <p class="job-category-numbers"><?php echo $query->found_posts; ?> Jobs available</p>
+
+                    <?php
+                    // Reset Post Data
+                    wp_reset_postdata();
+                    ?>
                     <p class="job-category-arrow-link"></p>
                 </div>
                 </div>
@@ -76,7 +133,26 @@ get_header();
                 <div class="job-category-content">
                 <h4 class="job-category-heading">Finance</h4>
                 <div class="job-category-info">
-                    <p class="job-category-numbers">235 Jobs available</p>
+                <?php
+                    // Query for the custom post type with taxonomy filter
+                    $query = new WP_Query(array(
+                        'post_type' => 'jobs', // Replace with your custom post type name
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'department', // Replace with your taxonomy name
+                                'field'    => 'slug', // or 'term_id'
+                                'terms'    => 'finance', // Replace with the actual term slug or term ID
+                            ),
+                        ),
+                    ));
+                    ?>
+
+                    <p class="job-category-numbers"><?php echo $query->found_posts; ?> Jobs available</p>
+
+                    <?php
+                    // Reset Post Data
+                    wp_reset_postdata();
+                    ?>
                     <p class="job-category-arrow-link"></p>
                 </div>
                 </div>
@@ -88,7 +164,26 @@ get_header();
                 <div class="job-category-content">
                 <h4 class="job-category-heading">Technology</h4>
                 <div class="job-category-info">
-                    <p class="job-category-numbers">235 Jobs available</p>
+                <?php
+                    // Query for the custom post type with taxonomy filter
+                    $query = new WP_Query(array(
+                        'post_type' => 'jobs', // Replace with your custom post type name
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'department', // Replace with your taxonomy name
+                                'field'    => 'slug', // or 'term_id'
+                                'terms'    => 'technology', // Replace with the actual term slug or term ID
+                            ),
+                        ),
+                    ));
+                    ?>
+
+                    <p class="job-category-numbers"><?php echo $query->found_posts; ?> Jobs available</p>
+
+                    <?php
+                    // Reset Post Data
+                    wp_reset_postdata();
+                    ?>
                     <p class="job-category-arrow-link"></p>
                 </div>
                 </div>
@@ -100,7 +195,26 @@ get_header();
                 <div class="job-category-content">
                 <h4 class="job-category-heading">Engineering</h4>
                 <div class="job-category-info">
-                    <p class="job-category-numbers">235 Jobs available</p>
+                <?php
+                    // Query for the custom post type with taxonomy filter
+                    $query = new WP_Query(array(
+                        'post_type' => 'jobs', // Replace with your custom post type name
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'department', // Replace with your taxonomy name
+                                'field'    => 'slug', // or 'term_id'
+                                'terms'    => 'engineering', // Replace with the actual term slug or term ID
+                            ),
+                        ),
+                    ));
+                    ?>
+
+                    <p class="job-category-numbers"><?php echo $query->found_posts; ?> Jobs available</p>
+
+                    <?php
+                    // Reset Post Data
+                    wp_reset_postdata();
+                    ?>
                     <p class="job-category-arrow-link"></p>
                 </div>
                 </div>
@@ -112,19 +226,57 @@ get_header();
                 <div class="job-category-content">
                 <h4 class="job-category-heading">Business</h4>
                 <div class="job-category-info">
-                    <p class="job-category-numbers">235 Jobs available</p>
+                <?php
+                    // Query for the custom post type with taxonomy filter
+                    $query = new WP_Query(array(
+                        'post_type' => 'jobs', // Replace with your custom post type name
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'department', // Replace with your taxonomy name
+                                'field'    => 'slug', // or 'term_id'
+                                'terms'    => 'business', // Replace with the actual term slug or term ID
+                            ),
+                        ),
+                    ));
+                    ?>
+
+                    <p class="job-category-numbers"><?php echo $query->found_posts; ?> Jobs available</p>
+
+                    <?php
+                    // Reset Post Data
+                    wp_reset_postdata();
+                    ?>
                     <p class="job-category-arrow-link"></p>
                 </div>
                 </div>
             </div>
-            <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?humanresources'">
+            <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?human-resources'">
                 <div class="job-category-icon-container">
                     <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/hr-icon.svg">
                 </div>
                 <div class="job-category-content">
                 <h4 class="job-category-heading">Human Resources</h4>
                 <div class="job-category-info">
-                    <p class="job-category-numbers">235 Jobs available</p>
+                <?php
+                    // Query for the custom post type with taxonomy filter
+                    $query = new WP_Query(array(
+                        'post_type' => 'jobs', // Replace with your custom post type name
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'department', // Replace with your taxonomy name
+                                'field'    => 'slug', // or 'term_id'
+                                'terms'    => 'human-resources', // Replace with the actual term slug or term ID
+                            ),
+                        ),
+                    ));
+                    ?>
+
+                    <p class="job-category-numbers"><?php echo $query->found_posts; ?> Jobs available</p>
+
+                    <?php
+                    // Reset Post Data
+                    wp_reset_postdata();
+                    ?>
                     <p class="job-category-arrow-link"></p>
                 </div>
                 </div>

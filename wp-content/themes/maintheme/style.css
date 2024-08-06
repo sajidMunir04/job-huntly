@@ -200,18 +200,12 @@ header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-family: Titillium-Bold;
-	font-size: 28px;
+	font-family: Titillium-SemiBold;
 }
 
 .job-categories-external-link,.featured-jobs-section-external-link,.latest-jobs-section-external-link{
 	color: var(--primary-color);
 	text-decoration: none;
-}
-
-.job-categories-section-header, .latest-jobs-section-header, .featured-jobs-section-header > p{
-	font-family: Titillium-SemiBold;
-	font-size: 16px;
 }
 
 .latest-jobs-section,.latest-jobs-section {
@@ -674,6 +668,10 @@ footer{
 	width: 10%;
 }
 
+.job-list-card-title{
+	color: var(--primary-color);
+}
+
 .job-list-card-logo {
 	width: 68px;
 	height: 68px;
@@ -688,6 +686,11 @@ footer{
 	display: flex;
 	justify-content: space-between;
 }
+
+.job-list-card-tags-container{
+	width: 12%;
+}
+
 
 .featured-job-tag{
 	padding: 1% 5%;

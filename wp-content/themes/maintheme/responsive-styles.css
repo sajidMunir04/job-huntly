@@ -103,6 +103,10 @@
         flex-direction: column;
     }
 
+    .job-list-card-title{
+        font-size: 20px;
+    }
+
     .job-category{
         width: 100%;
         display: flex;
@@ -183,7 +187,7 @@
     }
 
     .job-list-card-tags-container{
-        width: 50%;
+        width: 40%;
         margin-left: 4%;
     }
 }

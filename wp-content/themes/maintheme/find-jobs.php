@@ -42,11 +42,7 @@
     <div class="job-lists-container" id="result">
         <?php
         if ($_SERVER["REQUEST_METHOD"] === "GET") {
-            $keyword = htmlspecialchars($_GET['input']);
-
-            if ($keyword == '' || $keyword == null) {
-                return null;
-            }
+            $keyword = isset($_GET['input']) ? htmlspecialchars($_GET['input']) : '';
 
             $category = isset($_GET['category']) ? intval($_GET['category']) : 1; // Default to "All" if not set
 
@@ -99,7 +95,7 @@
                             </div>
                             <p class="job-list-card-location">$<?php echo $job_details['salary_min'] ?> - $<?php echo $job_details['salary_max']; ?></p>
                             <div class="job-list-card-tags-container">
-                                <p class="featured-job-tag job-tag-blue"><?php echo get_field('company_name'); ?></p>
+                                <p class="featured-job-tag job-tag-blue"><?php echo get_field('job_requirement'); ?></p>
                                 <p class="featured-job-tag job-tag-red"><?php echo get_field('job_seniority'); ?></p>
                             </div>
                         </div>
