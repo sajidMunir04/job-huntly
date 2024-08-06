@@ -7,6 +7,7 @@
     background-color: #202430;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 8%;
 }
 
 .jobs-search-input{
@@ -25,7 +26,10 @@
     background-color: white;
     font-family: Titillium-SemiBold;
     font-size: 18px;
-    text-align: center;    
+    text-align: center;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
 }
 
 .job-search-button{
@@ -41,7 +45,28 @@
 }
 
 option[value="1"] {
-    
+    text-align: center;
     font-family: Titillium-SemiBold;
     font-size: 18px;
+}
+
+
+.featured-job-tag{
+    padding: 1% 4%;
+    margin-left: 4%;
+}
+
+.job-list-card-tags-container{
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.job-list-card-title{
+    color: var(--primary-color);
+}
+
+
+@media screen and (max-width: 1100px) {
+
 }

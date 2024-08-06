@@ -1,13 +1,9 @@
-<head>
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style.css">
-</head>
-
 <?php
 get_header();
 ?>
 
 
-<di>
+<main>
     <div class="main-banner">
         <div class="main-banner-content">
             <h1 class="main-banner-heading">Discover more than <span class="heading-blue">5000+ Jobs</span></h1>
@@ -15,7 +11,7 @@ get_header();
                 career heights and passionate about startups.</p>
         </div>
         <div class="main-banner-picture">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-image.png">
+            <img class="banner-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-image.png">
         </div>
         <div class="pattern-container">
         <img class="main-pattern" src="<?php echo get_template_directory_uri(); ?>/assets/images/pattern.png">
@@ -34,87 +30,103 @@ get_header();
     <div class="job-categories-section">
         <div class="job-categories-section-header">
             <h3 class="job-categories-section-heading">Explore By <span class="blue-heading">Category</span></h3>
-            <p class="job-categories-external-link">Show all jobs <span class="right-arrow">&#x279C;</span></p>
+            <a href="<?php echo home_url(); ?>/find-jobs" class="job-categories-external-link">Show all jobs <span class="right-arrow">&#x279C;</span></a>
         </div>
         <div class="job-categories-section-content">
             <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?design'">
                 <div class="job-category-icon-container">
                     <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/design-category-icon.svg">
                 </div>
+                <div class="job-category-content">
                 <h4 class="job-category-heading">Design</h4>
                 <div class="job-category-info">
                     <p class="job-category-numbers">235 Jobs available</p>
                     <p class="job-category-arrow-link"></p>
+                </div>
                 </div>
             </div>
             <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?sales'">
                 <div class="job-category-icon-container">
                     <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/sales-icon.svg">
                 </div>
+                <div class="job-category-content">
                 <h4 class="job-category-heading">Sales</h4>
                 <div class="job-category-info">
                     <p class="job-category-numbers">235 Jobs available</p>
                     <p class="job-category-arrow-link"></p>
+                </div>
                 </div>
             </div>
             <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?marketing'">
                 <div class="job-category-icon-container">
                     <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/marketing-icon.svg">
                 </div>
+                <div class="job-category-content">
                 <h4 class="job-category-heading">Marketing</h4>
                 <div class="job-category-info">
                     <p class="job-category-numbers">235 Jobs available</p>
                     <p class="job-category-arrow-link"></p>
+                </div>
                 </div>
             </div>
             <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?finance'">
                 <div class="job-category-icon-container">
                     <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/finance-icon.svg">
                 </div>
+                <div class="job-category-content">
                 <h4 class="job-category-heading">Finance</h4>
                 <div class="job-category-info">
                     <p class="job-category-numbers">235 Jobs available</p>
                     <p class="job-category-arrow-link"></p>
+                </div>
                 </div>
             </div>
             <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?technology'">
                 <div class="job-category-icon-container">
                     <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/technology-icon.svg">
                 </div>
+                <div class="job-category-content">
                 <h4 class="job-category-heading">Technology</h4>
                 <div class="job-category-info">
                     <p class="job-category-numbers">235 Jobs available</p>
                     <p class="job-category-arrow-link"></p>
+                </div>
                 </div>
             </div>
             <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?engineering'">
                 <div class="job-category-icon-container">
                     <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/engineering-icon.svg">
                 </div>
+                <div class="job-category-content">
                 <h4 class="job-category-heading">Engineering</h4>
                 <div class="job-category-info">
                     <p class="job-category-numbers">235 Jobs available</p>
                     <p class="job-category-arrow-link"></p>
+                </div>
                 </div>
             </div>
             <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?business'">
                 <div class="job-category-icon-container">
                     <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/business-icon.svg">
                 </div>
+                <div class="job-category-content">
                 <h4 class="job-category-heading">Business</h4>
                 <div class="job-category-info">
                     <p class="job-category-numbers">235 Jobs available</p>
                     <p class="job-category-arrow-link"></p>
                 </div>
+                </div>
             </div>
-            <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?hr'">
+            <div class="job-category" onclick="window.location.href = '<?php echo site_url() ?>/departments?humanresources'">
                 <div class="job-category-icon-container">
                     <img class="job-category-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/hr-icon.svg">
                 </div>
+                <div class="job-category-content">
                 <h4 class="job-category-heading">Human Resources</h4>
                 <div class="job-category-info">
                     <p class="job-category-numbers">235 Jobs available</p>
                     <p class="job-category-arrow-link"></p>
+                </div>
                 </div>
             </div>
         </div>
@@ -122,7 +134,7 @@ get_header();
     <div class="featured-jobs-section">
         <div class="featured-jobs-section-header">
             <h5 class="featured-jobs-section-heading">Featured <span class="blue-heading">Jobs</span></h5>
-            <p class="featured-jobs-section-external-link">Show all jobs <span class="right-arrow">&#x279C;</span></p>
+            <a href="<?php echo home_url(); ?>/find-jobs" class="featured-jobs-section-external-link">Show all jobs <span class="right-arrow">&#x279C;</span></a>
         </div>
         <div class="featured-jobs-section-content">
             <?php
@@ -162,7 +174,7 @@ get_header();
     <div class="latest-jobs-section">
         <div class="latest-jobs-section-header">
             <h6 class="latest-jobs-section-heading">Latest <span class="blue-heading">Jobs</span></h6>
-            <p class="latest-jobs-section-external-link">Show All Jobs <span class="right-arrow">&#x279C;</span></p>
+            <a href="<?php echo home_url(); ?>/find-jobs" class="latest-jobs-section-external-link">Show All Jobs <span class="right-arrow">&#x279C;</span></a>
         </div>
         <div class="latest-jobs-section-content">
         <?php
@@ -199,6 +211,8 @@ get_header();
             ?>
         </div>
     </div>
+
+</main>
 
     <?php
         get_footer();
